@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         tvNumMoves = findViewById<TextView>(R.id.tvNumMoves)
         tvNumPairs = findViewById<TextView>(R.id.tvNumPairs)
 
+        val intent = Intent(this, CreateActivity::class.java)
+        intent.putExtra(EXTRA_BOARD_SIZE, BoardSize.MEDIUM)
+        startActivity(intent)
+
        setupBoard()
 
     }
